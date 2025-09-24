@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            background-color: white;
+        }
+        .calc{
+            height: 470px;
+            width: 450px;
+            border: 5px solid orange;
+            margin: 100px auto;
+            background-color: black;
+            border-radius: 10px;
+        }
+        .calc h1{
+            color: orange;
+            margin-top: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .calc input{
+            width: 80%;
+            margin-top: 25px;
+            height: 50px;
+            font-size: large;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+        }
+        input:focus{
+            outline: none;
+            box-shadow: 0 0 5px orange;
+            
+        }
+        .calc button{
+            height: 50px;
+            width: 55px;
+            margin-top: 30px;
+            margin-left: 8px;
+            background-color: white;
+            font-size: large;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border-radius: 50%;
+            font-weight: 700;
+            border: 3px solid orange;
+            text-align: center;
+        }
+        .calc button:hover{
+            background-color: rgb(232, 223, 223);
+        }
+        
+    </style>
+    <script>
+        function add(){
+           var val1= document.getElementById("n1").value;
+           var val2= document.getElementById("n2").value;
+           var result=parseInt(val1)+parseInt(val2);
+           var result=document.getElementById("res").value = result;
+        }
+        function sub(){
+           var val1= document.getElementById("n1").value;
+           var val2= document.getElementById("n2").value;
+           var result=parseInt(val1)-parseInt(val2);
+           var result=document.getElementById("res").value = result;
+        }
+        function mul(){
+           var val1= document.getElementById("n1").value;
+           var val2= document.getElementById("n2").value;
+           var result=parseInt(val1)*parseInt(val2);
+           var result=document.getElementById("res").value = result;
+        }
+        function div(){
+           var val1= document.getElementById("n1").value;
+           var val2= document.getElementById("n2").value;
+           var result=parseInt(val1)/parseInt(val2);
+           var result=document.getElementById("res").value = result;
+        }
+        function mod(){
+           var val1= document.getElementById("n1").value;
+           var val2= document.getElementById("n2").value;
+           var result=parseInt(val1)%parseInt(val2);
+           var result=document.getElementById("res").value = result;
+        }
+    </script>
+</head>
+<body>
+    <div class="calc">
+        <center><h1>Calculator</h1></center>
+        <center>
+        <input type="text" name="" id="n1" placeholder="Enter First Number" style="border:3px solid orange;"/>
+        <input type="text" name="" id="n2" placeholder="Enter Second Number" style="border:3px solid orange;"/>
+        </center>
+        <center>
+        <button onclick="add()" >+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mul()">*</button>
+        <button onclick="div()">/</button>
+        <button onclick="mod()">%</button>
+        <input type="text" id="res" readonly disabled style="margin: 29px auto;color: white;background-color: orange;height: 40px; border:2px solid white;font-weight: 700;text-align: center;"/>
+        </center>
+    </div>
+</body>
+</html>
